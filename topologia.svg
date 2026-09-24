@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860" role="img" aria-labelledby="title desc">
+<title id="title">Topología P2 — matrícula 2024-2388</title>
+<desc id="desc">Dos conexiones externas llegan a FortiGate; port2 conecta por trunk al switch y a las VLAN de usuarios, web y base de datos.</desc>
+<rect width="1200" height="860" fill="#f3f6fb"/>
+<style>text{font-family:Arial,sans-serif;fill:#153149} .title{font-size:28px;font-weight:bold}.h{font-size:20px;font-weight:bold}.s{font-size:16px}.n{font-size:14px}.box{fill:white;stroke:#b6c8da;stroke-width:2}.line{fill:none;stroke:#55748e;stroke-width:3}</style>
+<text x="45" y="48" class="title">P2 · Segmentación y controles de seguridad</text>
+<text x="45" y="78" class="s">Matrícula 2024-2388 · Diagrama lógico de la configuración reportada</text>
+<rect x="55" y="115" width="420" height="100" rx="14" class="box"/>
+<text x="80" y="145" class="h">Cloud1 · Administración / VMnet1</text>
+<text x="80" y="172" class="s">Windows 192.168.6.1 · Red 192.168.6.0/24</text>
+<text x="80" y="196" class="s">Acceso GUI y administración de servidores</text>
+<rect x="725" y="115" width="420" height="100" rx="14" class="box"/>
+<text x="750" y="145" class="h">Cloud2 · Red doméstica / Internet</text>
+<text x="750" y="172" class="s">Gateway 192.168.1.1 · Red 192.168.1.0/24</text>
+<text x="750" y="196" class="s">Salida WAN con ruta por defecto y NAT</text>
+<path d="M265 215 V255 H465 V285 M935 215 V255 H735 V285" class="line"/>
+<rect x="335" y="285" width="530" height="115" rx="14" fill="#e3eef9" stroke="#2770a2" stroke-width="2"/>
+<text x="360" y="315" class="h">FortiGate-VM KVM · FortiOS 7.0.9</text>
+<text x="360" y="344" class="s">port1: 192.168.6.131 · port3 WAN: 192.168.1.16</text>
+<text x="360" y="373" class="s">port2: gateways VLAN 10 / 20 / 30</text>
+<path d="M600 400 V466" class="line"/>
+<text x="620" y="438" class="s">Trunk 802.1Q · VLAN 10, 20, 30</text>
+<rect x="335" y="466" width="530" height="82" rx="14" class="box"/>
+<text x="360" y="498" class="h">Switch IOSvL2 · SW-P2-2024-2388</text>
+<text x="360" y="527" class="s">Gi0/0 trunk · Puertos access con port security</text>
+<path d="M425 548 V570 H210 V608 M600 548 V608 M775 548 V570 H990 V608" class="line"/>
+<text x="170" y="593" class="n">Gi0/1</text><text x="620" y="590" class="n">Gi0/2</text><text x="1010" y="593" class="n">Gi0/3</text>
+<rect x="40" y="608" width="340" height="139" rx="14" class="box"/>
+<text x="60" y="638" class="h">Usuarios · VLAN 10</text>
+<text x="60" y="667" class="s">Kali: 10.23.88.21 por DHCP</text>
+<text x="60" y="695" class="s">Red: 10.23.88.0/25</text>
+<text x="60" y="723" class="s">Gateway: 10.23.88.1</text>
+<rect x="430" y="608" width="340" height="139" rx="14" class="box"/>
+<text x="450" y="638" class="h">WEB-P2 · VLAN 20</text>
+<text x="450" y="667" class="s">10.23.88.130 · Nginx / PHP</text>
+<text x="450" y="695" class="s">Red: 10.23.88.128/28</text>
+<text x="450" y="723" class="s">Gateway: 10.23.88.129</text>
+<rect x="820" y="608" width="340" height="139" rx="14" class="box"/>
+<text x="840" y="638" class="h">DB-P2 · VLAN 30</text>
+<text x="840" y="667" class="s">10.23.88.146 · MariaDB</text>
+<text x="840" y="695" class="s">Red: 10.23.88.144/28</text>
+<text x="840" y="723" class="s">Gateway: 10.23.88.145</text>
+<text x="45" y="789" class="s">Usuarios → WEB:443 permitido · Usuarios → DB:3306 denegado · WEB → DB:3306 permitido</text>
+<text x="45" y="819" class="s">Excepción de laboratorio: HTTP/80 para IPS y File Filter. Inspección profunda HTTPS pendiente.</text>
+</svg>

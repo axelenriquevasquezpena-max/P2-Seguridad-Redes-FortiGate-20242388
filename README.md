@@ -21,7 +21,7 @@ El catálogo HTTPS funciona y se observaron registros de denegación de usuarios
 
 ## Topología
 
-![Topología P2](imagenes/topologia-gns3.png)
+![Topología P2](topologia-gns3.png)
 
 Cloud1 conecta Windows a la administración por VMnet1. Cloud2 conecta la WAN a la red doméstica. FortiGate enruta entre VLAN por subinterfaces de port2. Los iconos de PC de las VM no cambian su función de servidores.
 
@@ -71,35 +71,35 @@ La ruta por defecto utiliza la WAN y 192.168.1.1, distancia 5 según la configur
 ## Evidencias seleccionadas
 
 ### Segmentación
-![Denegación a DB y acceso HTTPS](imagenes/01-politicas-trafico.png)
+![Denegación a DB y acceso HTTPS](01-politicas-trafico.png)
 
 ### IPS por HTTP
-![SQLi bloqueado](imagenes/02-ips-sqli.png)
+![SQLi bloqueado](02-ips-sqli.png)
 
 ### Cuarentena y recuperación
-![Bloqueo temporal](imagenes/03-cuarentena.png)
-![Catálogo después de la cuarentena](imagenes/04-recuperacion.png)
+![Bloqueo temporal](03-cuarentena.png)
+![Catálogo después de la cuarentena](04-recuperacion.png)
 
 ### File Filter
-![Ejecutable bloqueado](imagenes/05-file-filter.png)
+![Ejecutable bloqueado](05-file-filter.png)
 
 ### Application Control
-![Firefox en Monitor](imagenes/06-application-control.png)
+![Firefox en Monitor](06-application-control.png)
 
 ### Protección DoS
-![Evento SYN flood](imagenes/07-dos.png)
+![Evento SYN flood](07-dos.png)
 
 ## Documentación
 
-- [Implementación](docs/implementacion.md).
-- [Pruebas y resultados](docs/pruebas.md).
-- [Limitación HTTPS](docs/limitaciones.md).
-- [Inventario de evidencias](docs/evidencias.md).
-- [Guion de video](docs/video.md).
-- [Preparación de GitHub](docs/primeros-pasos.md).
-- [Condiciones de entrega](docs/condiciones-entrega.md).
-- [Configuraciones por incorporar](configs/README.md).
-- [Comandos de pruebas](scripts/pruebas-manuales.md).
+- [Implementación](implementacion.md).
+- [Pruebas y resultados](pruebas.md).
+- [Limitación HTTPS](limitaciones.md).
+- [Inventario de evidencias](evidencias.md).
+- [Guion de video](video.md).
+- [Preparación de GitHub](primeros-pasos.md).
+- [Condiciones de entrega](condiciones-entrega.md).
+- [Configuraciones por incorporar](configuraciones-pendientes.md).
+- [Comandos de pruebas](pruebas-manuales.md).
 
 ## Conclusión
 
@@ -107,8 +107,9 @@ Las pruebas documentan controles efectivos en los flujos ensayados. La protecci�
 
 ## Informe y guion descargables
 
-- [Informe Word](documentos/AxelEnriqueVasquezPeña_20242388_P2_Informe.docx)
-- [Informe PDF](documentos/AxelEnriqueVasquezPeña_20242388_P2_Informe.pdf)
-- [Guion Word](documentos/AxelEnriqueVasquezPeña_20242388_P2_Guion.docx)
-- [Guion PDF](documentos/AxelEnriqueVasquezPeña_20242388_P2_Guion.pdf)
+- [Informe Word](AxelEnriqueVasquezPeña_20242388_P2_Informe.docx)
+- [Informe PDF](AxelEnriqueVasquezPeña_20242388_P2_Informe.pdf)
+- [Guion Word](AxelEnriqueVasquezPeña_20242388_P2_Guion.docx)
+- [Guion PDF](AxelEnriqueVasquezPeña_20242388_P2_Guion.pdf)
+
 
