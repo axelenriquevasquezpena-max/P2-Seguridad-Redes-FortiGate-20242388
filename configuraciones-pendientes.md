@@ -1,6 +1,6 @@
 # Configuraciones originales por incorporar
 
-No hay acceso directo a las VM desde esta documentación. No se fabricaron running-configs ni se convirtió la descripción en una exportación pretendidamente real.
+Se recibieron y revisaron cuatro archivos reales de WEB el 24/09/2026: nginx-p2.conf, nginx-p2-http-lab.conf, web-netplan.yaml e index.php. No contienen contraseñas incrustadas. index.php carga las credenciales desde /etc/p2/database.php, que no se publica. Las exportaciones de DB, switch y FortiGate siguen pendientes.
 
 El estudiante reportó guardar un respaldo de FortiGate. Su ruta local no fue proporcionada; todavía no se incorporó.
 

@@ -11,7 +11,7 @@
 
 Implementar una red segmentada para usuarios, servidor web y base de datos; controlar los accesos entre segmentos; publicar un catálogo por HTTPS y demostrar protección ante patrones SQL Injection, descargas de ejecutables y tráfico SYN de tasa elevada.
 
-La documentación se basa en las configuraciones, salidas y capturas aportadas por el estudiante. No es una auditoría independiente de los equipos. Las exportaciones originales todavía deben incorporarse tras retirar secretos.
+La documentación se basa en las configuraciones, salidas y capturas aportadas por el estudiante. No es una auditoría independiente de los equipos. Se incorporan las configuraciones reales de WEB revisadas; faltan las exportaciones de DB, switch y FortiGate.
 
 ## Resultado y alcance
 
@@ -105,3 +105,12 @@ La ruta por defecto utiliza la WAN y 192.168.1.1, distancia 5 según la configur
 
 Las pruebas documentan controles efectivos en los flujos ensayados. La protección del contenido HTTPS permanece sin validar y los resultados HTTP se presentan como evidencia parcial. Antes de entregar deben completarse las exportaciones sanitizadas, los enlaces y las verificaciones señaladas.
 
+
+## Archivos reales del servidor WEB
+
+- [Aplicación PHP](index.php).
+- [Nginx HTTPS](nginx-p2.conf).
+- [Nginx HTTP de pruebas](nginx-p2-http-lab.conf).
+- [Red del servidor WEB](web-netplan.yaml).
+
+Copiados del servidor y revisados el 24/09/2026. Las credenciales externas de la base de datos y la clave privada TLS no se publican.
