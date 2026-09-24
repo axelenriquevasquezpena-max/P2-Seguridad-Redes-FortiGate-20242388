@@ -105,11 +105,3 @@ La ruta por defecto utiliza la WAN y 192.168.1.1, distancia 5 según la configur
 
 Las pruebas documentan controles efectivos en los flujos ensayados. La protección del contenido HTTPS permanece sin validar y los resultados HTTP se presentan como evidencia parcial. Antes de entregar deben completarse las exportaciones sanitizadas, los enlaces y las verificaciones señaladas.
 
-## Informe y guion descargables
-
-- [Informe Word](AxelEnriqueVasquezPeña_20242388_P2_Informe.docx)
-- [Informe PDF](AxelEnriqueVasquezPeña_20242388_P2_Informe.pdf)
-- [Guion Word](AxelEnriqueVasquezPeña_20242388_P2_Guion.docx)
-- [Guion PDF](AxelEnriqueVasquezPeña_20242388_P2_Guion.pdf)
-
-
