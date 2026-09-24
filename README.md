@@ -1,4 +1,4 @@
-**Video demostrativo: PENDIENTE — insertar aquí el enlace real de YouTube o OneDrive institucional (máximo 10 minutos).**
+
 
 # Práctica P2 — Seguridad de redes con FortiGate
 
