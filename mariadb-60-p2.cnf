@@ -1,0 +1,3 @@
+[mysqld]
+bind-address = 10.23.88.146
+skip-name-resolve
