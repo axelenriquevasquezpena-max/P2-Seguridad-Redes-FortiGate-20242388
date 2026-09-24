@@ -1,0 +1,12 @@
+# No publicar secretos ni respaldos originales
+*.key
+*.p12
+*.pfx
+*.lic
+*.pem
+.env
+database.php
+*backup*
+*respaldo*
+# El binario de prueba se descarga de la fuente oficial
+*.exe
