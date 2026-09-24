@@ -1,26 +1,11 @@
-# Configuraciones originales por incorporar
+# Estado de configuraciones y verificaciones
 
-Se recibieron y revisaron cuatro archivos reales de WEB el 24/09/2026: nginx-p2.conf, nginx-p2-http-lab.conf, web-netplan.yaml e index.php. No contienen contraseñas incrustadas. index.php carga las credenciales desde /etc/p2/database.php, que no se publica. También se recibieron db-netplan.yaml, mariadb-50-server.cnf, mariadb-60-p2.cnf y productos.sql del servidor DB. El volcado incluye solamente la tabla productos y sus tres registros. Se incorporó fortigate-sanitizado.conf, obtenido por respaldo GUI el 24/09/2026. Se omitieron credenciales, claves y certificados; es una copia documental, no un respaldo listo para restaurar. Se incorporó switch-running-config.txt, aportado desde la consola el 24/09/2026. Confirma trunk VLAN 10/20/30, VLAN nativa 999, puertos de acceso, sticky/restrict, PortFast, BPDU Guard y doce puertos sin uso apagados. Falta comprobar show vlan brief y show interfaces trunk: la salida recibida no contiene la base de VLAN.
+Se publican archivos reales revisados de WEB, DB, switch y FortiGate. Las credenciales y claves privadas se excluyen.
 
-El respaldo original de FortiGate se conserva localmente y no se publica. La regla TEMP_WEB_UPDATES continúa activa con NAT; falta cerrar esta excepción y verificar las restricciones finales. La política HTTP de laboratorio también tiene NAT activado en el respaldo recibido.
+- WEB: index.php, nginx-p2.conf, nginx-p2-http-lab.conf y web-netplan.yaml.
+- DB: db-netplan.yaml, mariadb-50-server.cnf, mariadb-60-p2.cnf y productos.sql (tabla y tres productos; no usuarios).
+- Switch: switch-running-config.txt. Las salidas aportadas de show vlan brief y show interfaces trunk confirman VLAN 10/20/30 activas y en reenvío por Gi0/0, nativa 999. El estudiante reportó guardar startup-config.
+- FortiGate: fortigate-sanitizado.conf, respaldo GUI final 24/09/2026 14:03. TEMP_WEB_UPDATES tiene status disable. Se omitieron credenciales, claves y certificados; no es restaurable directamente.
+- [Verificación NAT y pruebas finales](verificacion-nat.md).
 
-| Archivo público sugerido | Obtener del equipo | Tratamiento |
-|---|---|---|
-| fortigate-sanitizado.conf | Backup por GUI FortiGate | Retirar claves, certificados privados, usuarios/secretos sensibles y valores ENC |
-| switch-running-config.txt | show running-config en SW-P2-2024-2388 | Retirar contraseñas y secretos |
-| web-netplan.yaml | /etc/netplan/50-cloud-init.yaml de WEB | Revisar datos |
-| db-netplan.yaml | Mismo archivo en DB | Revisar datos |
-| nginx-p2.conf | /etc/nginx/sites-available/p2 | Copia real |
-| nginx-p2-http-lab.conf | /etc/nginx/sites-available/p2-http-lab | Identificar como temporal |
-| index.php | /var/www/p2/index.php | Revisar que no incluya credenciales |
-| database.example.php | /etc/p2/database.php | Sustituir contraseña por placeholder |
-| mariadb-60-p2.cnf | /etc/mysql/mariadb.conf.d/60-p2.cnf | Copia real |
-| productos.sql | Esquema y filas de laboratorio_p2 | No incluir tablas de usuarios ni credenciales |
-| web-p2.crt | Certificado público, opcional | No incluir su clave privada |
-
-Antes de copiar el running-config del switch puede usarse terminal length 0 para evitar paginación. Ese comando es del switch, no de FortiGate.
-
-Guardar scripts de instalación originales si se conservaron. El registro de comandos incluido en scripts es una transcripción documental, no la exportación del historial completo.
-
-No agregar respaldos cifrados como única evidencia revisable. Conservarlos privadamente para recuperación.
-
+Pendiente: enlace del video al inicio del README y en TXT, revisión final de enlaces/documentación. DPI del contenido HTTPS no se completó. Las pruebas negativas abarcan DB:22, DB:80 y una dirección externa:80, no todos los destinos posibles.
