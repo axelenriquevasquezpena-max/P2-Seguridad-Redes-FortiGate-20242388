@@ -1,6 +1,6 @@
 # Práctica P2 — Seguridad de redes con FortiGate
 
-**Video demostrativo:** pendiente de agregar el enlace de YouTube o OneDrive institucional.
+**Video demostrativo:** [Ver video en OneDrive institucional](https://itlaedudo-my.sharepoint.com/:v:/g/personal/20242388_itla_edu_do/IQAVCkpHLihMQZEYPwg9CifyAVpRR-jZB7LTc73zHVAEabw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=VnRpvw)
 
 **Estudiante:** Axel Enrique Vasquez Peña  
 **Matrícula:** 2024-2388  
@@ -80,7 +80,7 @@ La WAN port3 recibe por DHCP 192.168.1.7/24 y gateway 192.168.1.1. En la GUI se 
 | Bloqueo .exe | Demostrado por HTTP con File Filter |
 | Application Control | Firefox identificado en Monitor; no bloquea .exe en la evidencia |
 | Protección DoS | tcp_syn_flood, clear_session hacia WEB:443 |
-| GitHub, video y TXT | Repositorio público creado; video y enlace final de entrega pendientes |
+| GitHub, video y TXT | Repositorio público creado; video enlazado al inicio y TXT de entrega preparado |
 
 ## Evidencias seleccionadas
 
@@ -114,7 +114,7 @@ La WAN port3 recibe por DHCP 192.168.1.7/24 y gateway 192.168.1.1. En la GUI se 
 
 ## Conclusión
 
-Las pruebas documentan controles efectivos en los flujos ensayados. La protección del contenido HTTPS permanece sin validar y los resultados HTTP se presentan como evidencia parcial. Las exportaciones sanitizadas están publicadas. Falta incorporar el enlace del video al inicio del repositorio y al TXT de entrega. No se presenta la inspección profunda HTTPS como completada.
+Las pruebas documentan controles efectivos en los flujos ensayados. La protección del contenido HTTPS permanece sin validar y los resultados HTTP se presentan como evidencia parcial. Las exportaciones sanitizadas están publicadas. El video está enlazado al inicio del repositorio y el TXT de entrega contiene los enlaces del repositorio y del video. No se presenta la inspección profunda HTTPS como completada.
 
 
 ## Archivos reales del servidor WEB
